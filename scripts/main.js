@@ -3,11 +3,14 @@ import { LocationTypeChoices } from "./UrbanDweller.js"
 
 const container = document.querySelector("#mainContainer")
 
-const render = () => {
+const render = async () => {
     const jeanOwnershipHTML = OwnJeanChoices()
-    const locationsHTML = LocationTypeChoices()
+    const locationsHTML = await LocationTypeChoices()
 
-    container.innerHTML = jeanOwnershipHTML
+    container.innerHTML = `
+        ${jeanOwnershipHTML}
+        ${locationsHTML}
+    `
 }
 
 render()
