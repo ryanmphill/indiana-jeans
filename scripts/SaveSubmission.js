@@ -13,5 +13,5 @@ export const SaveSubmission = () => {
 
     document.addEventListener("click", handleSurveySubmissionClick)
 
-    return `<button id='saveSubmission'>Save Sumbission</button>`
+    return `<div><button id='saveSubmission'>Save Sumbission</button></div>`
 }
