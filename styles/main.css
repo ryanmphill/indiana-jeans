@@ -1,0 +1,13 @@
+.submissions {
+    display: flex;
+    border: 1px dashed lightskyblue;
+    background-color: lightgray;
+    width: 40%;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    margin: 0.5rem 0;
+}
+
+#saveSubmission {
+    margin: 1rem 0 0.5rem 0;
+}
