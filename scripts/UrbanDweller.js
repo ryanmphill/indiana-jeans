@@ -26,9 +26,19 @@ export const LocationTypeChoices = async () => {
     const locations = await response.json()
 
     let choicesHTML = `<h2>Which type of area do you live in?</h2>`
+    let divStringArray = locations.map(
+        (location) => {
+            return `<input type='radio' name='location' value='${location.id}' /> ${location.label}`
+        }
+    )
+
+    choicesHTML += divStringArray.join("")
+
+    /* CHANGED FOR LOOP TO .MAP() ARRAY  METHOD ^^^
     for (const location of locations) {
         choicesHTML += `<input type='radio' name='location' value='${location.id}' /> ${location.label}`
     }
+    */
     
     return choicesHTML
 }

@@ -8,7 +8,7 @@ const container = document.querySelector("#mainContainer")
 const render = async () => {
     const jeanOwnershipHTML = OwnJeanChoices()
     const locationsHTML = await LocationTypeChoices()
-    const buttonHTML = await SaveSubmission()
+    const buttonHTML = SaveSubmission()
     const submissionHTML = await SubmissionList()
 
     container.innerHTML = `
